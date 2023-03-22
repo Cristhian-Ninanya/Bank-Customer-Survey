@@ -1,0 +1,236 @@
+Microsoft Windows [Versión 10.0.19044.1288]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\ML_scikitlearn\entorno>c:/ML_scikitlearn/entorno/Scripts/activate.bat
+
+(entorno) C:\ML_scikitlearn\entorno>c:/ML_scikitlearn/entorno/Scripts/python.exe c:/ML_scikitlearn/entorno/main.py
+
+Dataset dimensions:  (45211, 17)
+
+Dataset columns:
+ Index(['age', 'job', 'marital', 'education', 'default', 'balance', 'housing',
+       'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays',    
+       'previous', 'poutcome', 'y'],
+      dtype='object')
+
+DataSet:
+    age           job  marital  education default  balance housing loan  contact  day month  duration  campaign  pdays  previous poutcome  y
+0   58    management  married   tertiary      no     2143     yes   no  unknown    5   may       261         1     -1         0  unknown  0
+1   44    technician   single  secondary      no       29     yes   no  unknown    5   may       151         1     -1         0  unknown  0
+2   33  entrepreneur  married  secondary      no        2     yes  yes  unknown    5   may        76         1     -1         0  unknown  0
+3   47          blue  married    unknown      no     1506     yes   no  unknown    5   may        92         1     -1         0  unknown  0
+4   33       unknown   single    unknown      no        1      no   no  unknown    5   may       198         1     -1         0  unknown  0
+
+Columns dataset:
+ Index(['age', 'job', 'marital', 'education', 'default', 'balance', 'housing',
+       'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays',
+       'previous', 'poutcome', 'y'],
+      dtype='object')
+
+Balanced values:
+ 0    5289
+1    5289
+Name: y, dtype: int64
+
+Dataset Balanced Dimensions: (10578, 17)
+
+----------Results for Random Forest (Unbalanced Data)----------
+
+----------------------------------------------------------------------
+*f1_score results for RandomForestClassifier: 50.761%
+*Accuracy for RandomForestClassifier: 65.982%
+*Recall for  RandomForestClassifier : 41.247%
+----------------------------------------------------
+Training duration: 0:00:07.806614 segundos.
+
+----------Results for Random Forest (Balanced Data)----------
+
+-----------------------------------------
+Training time Cross Validation Random Forest
+Time: 0:00:24.096105 seconds.
+-----------------------------------------
+Best parameters for RandomForest:
+ {'criterion': 'entropy', 'max_depth': 2, 'max_features': 'log2', 'n_estimators': 200}
+----------------------------------------------------------------------
+*f1_score results for RandomForestClassifier: 76.392%
+*Accuracy for RandomForestClassifier: 75.094%
+*Recall for  RandomForestClassifier : 77.734%
+----------------------------------------------------
+Training duration: 0:00:00.689129 segundos.
+
+----------Results for Logistic Regression (Unbalanced Data)----------
+
+----------------------------------------------------------------------
+*f1_score results for LogisticRegression: 44.846%
+*Accuracy for LogisticRegression: 65.493%
+*Recall for  LogisticRegression : 34.097%
+----------------------------------------------------
+Training duration: 0:00:00.716053 segundos.
+
+----------Results for Logistic Regression (Balanced Data)----------
+
+-----------------------------------------
+Training time Cross Validation Logistic Regression:
+Time: 0:00:28.066754 seconds.
+-----------------------------------------
+Best parameters for LogisticRegression:
+ {'C': 5.0, 'l1_ratio': 0.1, 'max_iter': 5000, 'penalty': 'elasticnet', 'solver': 'saga', 'tol': 0.005}
+----------------------------------------------------------------------
+*f1_score results for LogisticRegression: 82.382%
+*Accuracy for LogisticRegression: 83.036%
+*Recall for  LogisticRegression : 81.738%
+----------------------------------------------------
+Training duration: 0:00:00.392841 segundos.
+
+----------Results for SVM (Unbalanced Data)----------
+
+----------------------------------------------------------------------
+*f1_score results for SVC: 46.924%
+*Accuracy for SVC: 68.607%
+*Recall for  SVC : 35.655%
+----------------------------------------------------
+Training duration: 0:00:39.149396 segundos.
+
+----------Results for SVM (Balanced Data)----------
+
+-----------------------------------------
+Training time Cross Validation SVM:
+Time: 0:02:54.344908 seconds.
+-----------------------------------------
+Best parameters for LogisticRegression:
+ {'C': 10, 'kernel': 'linear'}
+----------------------------------------------------------------------
+*f1_score results for SVC: 82.484%
+*Accuracy for SVC: 81.967%
+*Recall for  SVC : 83.008%
+----------------------------------------------------
+Training duration: 0:00:10.417355 segundos.
+
+ ----------Classifiers metrics results----------
+
+Unbalanced DataSet Metrics:
+                    model  f1_score  accuracy    recall
+0  RandomForestClassifier  0.507614  0.659824  0.412466
+
+(entorno) C:\ML_scikitlearn\entorno>c:/ML_scikitlearn/entorno/Scripts/python.exe c:/ML_scikitlearn/entorno/main.py
+
+Dataset dimensions:  (45211, 17)
+
+Dataset columns:
+ Index(['age', 'job', 'marital', 'education', 'default', 'balance', 'housing',
+       'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays',
+       'previous', 'poutcome', 'y'],
+      dtype='object')
+
+DataSet:
+    age           job  marital  education default  balance housing loan  contact  day month  duration  campaign  pdays  previous poutcome  y
+0   58    management  married   tertiary      no     2143     yes   no  unknown    5   may       261         1     -1         0  unknown  0 
+1   44    technician   single  secondary      no       29     yes   no  unknown    5   may       151         1     -1         0  unknown  0 
+2   33  entrepreneur  married  secondary      no        2     yes  yes  unknown    5   may        76         1     -1         0  unknown  0 
+3   47          blue  married    unknown      no     1506     yes   no  unknown    5   may        92         1     -1         0  unknown  0
+4   33       unknown   single    unknown      no        1      no   no  unknown    5   may       198         1     -1         0  unknown  0
+
+Columns dataset:
+ Index(['age', 'job', 'marital', 'education', 'default', 'balance', 'housing',
+       'loan', 'contact', 'day', 'month', 'duration', 'campaign', 'pdays',
+       'previous', 'poutcome', 'y'],
+      dtype='object')
+
+Balanced values:
+ 0    5289
+1    5289
+Name: y, dtype: int64
+
+Dataset Balanced Dimensions: (10578, 17)
+
+----------Results for Random Forest (Unbalanced Data)----------
+
+----------------------------------------------------------------------
+*f1_score results for RandomForestClassifier: 50.761%
+*Accuracy for RandomForestClassifier: 65.982%
+*Recall for  RandomForestClassifier : 41.247%
+----------------------------------------------------
+Training duration: 0:00:05.458296 segundos.
+
+----------Results for Random Forest (Balanced Data)----------
+
+-----------------------------------------
+Training time Cross Validation Random Forest
+Time: 0:00:23.628573 seconds.
+-----------------------------------------
+Best parameters for RandomForest:
+ {'criterion': 'entropy', 'max_depth': 2, 'max_features': 'log2', 'n_estimators': 200}
+----------------------------------------------------------------------
+*f1_score results for RandomForestClassifier: 76.620%
+*Accuracy for RandomForestClassifier: 75.354%
+*Recall for  RandomForestClassifier : 77.930%
+----------------------------------------------------
+Training duration: 0:00:00.670183 segundos.
+
+----------Results for Logistic Regression (Unbalanced Data)----------
+
+----------------------------------------------------------------------
+*f1_score results for LogisticRegression: 44.846%
+*Accuracy for LogisticRegression: 65.493%
+*Recall for  LogisticRegression : 34.097%
+----------------------------------------------------
+Training duration: 0:00:00.692418 segundos.
+
+----------Results for Logistic Regression (Balanced Data)----------
+
+-----------------------------------------
+Training time Cross Validation Logistic Regression:
+Time: 0:00:30.122865 seconds.
+-----------------------------------------
+Best parameters for LogisticRegression:
+ {'C': 1.0, 'l1_ratio': 0.5, 'max_iter': 5000, 'penalty': 'elasticnet', 'solver': 'saga', 'tol': 0.005}
+----------------------------------------------------------------------
+*f1_score results for LogisticRegression: 82.107%
+*Accuracy for LogisticRegression: 83.603%
+*Recall for  LogisticRegression : 80.664%
+----------------------------------------------------
+Training duration: 0:00:00.357222 segundos.
+
+----------Results for SVM (Unbalanced Data)----------
+
+----------------------------------------------------------------------
+*f1_score results for SVC: 46.924%
+*Accuracy for SVC: 68.607%
+*Recall for  SVC : 35.655%
+----------------------------------------------------
+Training duration: 0:00:37.845822 segundos.
+
+----------Results for SVM (Balanced Data)----------
+
+-----------------------------------------
+Training time Cross Validation SVM:
+Time: 0:03:00.805451 seconds.
+-----------------------------------------
+Best parameters for LogisticRegression:
+ {'C': 10, 'kernel': 'linear'}
+----------------------------------------------------------------------
+*f1_score results for SVC: 82.877%
+*Accuracy for SVC: 83.039%
+*Recall for  SVC : 82.715%
+----------------------------------------------------
+Training duration: 0:00:10.859407 segundos.
+
+ ----------Classifiers metrics results----------
+
+Unbalanced DataSet Metrics:
+                    model  f1_score  accuracy    recall
+0  RandomForestClassifier  0.507614  0.659824  0.412466
+1      LogisticRegression  0.448463  0.654930  0.340972
+2                     SVC  0.469240  0.686067  0.356554
+
+ Balanced DataSet Metrics:
+                    model  f1_score  accuracy    recall
+0  RandomForestClassifier  0.766203  0.753541  0.779297
+1      LogisticRegression  0.821074  0.836032  0.806641
+2                     SVC  0.828767  0.830392  0.827148
+
+ Best Classifier:
+   model    recall  f1_score  accuracy
+0   SVC  0.827148  0.828767  0.830392
+
+(entorno) C:\ML_scikitlearn\entorno>
