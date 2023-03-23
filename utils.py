@@ -23,10 +23,6 @@ def features_target(dataset, drop_cols, y):
 
 #Balance dataset in function of target values proportion:
 def balance_dataset(dataset, target):
-    #Countplot for target values (unbalanced)
-    figure1 = sns.countplot(x=dataset[target], palette='Set2')
-    plt.title(f"Umbalanced Taget '{target}'")
-    plt.savefig('results/figure1.jpg')
 
     # split dataframe for each value of dataset (0 and 1):
     df_target_0 = dataset[dataset[target]==0]
@@ -40,14 +36,21 @@ def balance_dataset(dataset, target):
 
     # Join both balanced dataframe:
     df_balanced = pd.concat([df_sample_0, df_sample_1]) 
-
-    print('\nColumns dataset: \n',df_balanced.columns)
+    print('\nUnbalanced Dataset Dimensions: \n',dataset.shape)
+    print('\nBalanced Dataset Dimensions: \n',df_balanced.shape)
     print('\nBalanced values: \n',df_balanced[target].value_counts())
 
     #Countplot for target values (unbalanced)
-    figure2 = sns.countplot(x=df_balanced[target], palette='Set2')
+    fig1 = sns.countplot(x=dataset[target], palette='Set2')
+    plt.title(f"Umbalanced Taget '{target}'")
+    plt.savefig('results/figure1.jpg')
+    plt.close()
+
+    #Countplot for target values (balanced)
+    fig2 = sns.countplot(x=df_balanced[target], palette='Set2')
     plt.title(f"Balanced Target '{target}'")
     plt.savefig('results/figure2.jpg')
+    plt.close()
 
     return df_balanced
 
